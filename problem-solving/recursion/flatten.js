@@ -3,25 +3,15 @@
 
 function flatten(arr) {
     let res = [];
-    let copy = Array.from(arr);
     
-    function getValue(subarr, item) {
-        console.log(subarr)
-        if (subarr.length) {
-            if (typeof item === 'number') {
-                res.push(item);
-                getValue(subarr, subarr.pop());
-            } else {
-                console.log(item)
-                let cpy = Array.from(item);
-                getValue(cpy, cpy.pop());
-            }
+    for (let item of arr) {
+        if (typeof item === 'number') {
+            res.push(item);
+        } else {
+            res.push(...flatten(item));
         }
-        
-        return res;
     }
 
-    getValue(copy, copy.pop());
     return res;
 }
 

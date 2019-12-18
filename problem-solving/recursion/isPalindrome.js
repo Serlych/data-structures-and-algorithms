@@ -13,6 +13,7 @@ function isPalindrome(str) {
     return str === checkPalindrome(str);
 }
 
+console.log(isPalindrome('a'))
 console.log(isPalindrome('awesome')) // false
 console.log(isPalindrome('foobar')) // false
 console.log(isPalindrome('tacocat')) // true
