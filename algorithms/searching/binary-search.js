@@ -1,6 +1,5 @@
 // Write a function called binarySearch which accepts a sorted array and a value and returns the index at which the
 // value exists. Otherwise, return -1.
-
 function binarySearch(arr, val) {
     function getMid (num1, num2) {
         return Math.round((num1 + num2) / 2);
@@ -36,7 +35,6 @@ function binarySearch(arr, val) {
 }
 
 // Refactor
-
 function binarySearch(arr, val) {
     const getMid = (num1, num2) => Math.floor((num1 + num2) / 2);
 
@@ -62,7 +60,6 @@ function binarySearch(arr, val) {
 }
 
 // Cleanup
-
 const binarySearch = (arr, val) => {
     const getMid = (num1, num2) => Math.floor((num1 + num2) / 2);
     let start = 0, end = arr.length - 1, mid = getMid(start, end);
